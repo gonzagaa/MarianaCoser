@@ -64,7 +64,7 @@
   #home p {
     font-size: 1.6rem;
     font-weight: 300;
-    color: #cacaca;
+    color: #a9a9a9;
     line-height: 1.4;
   }
 
@@ -85,7 +85,6 @@
   
   #home p span {
     font-weight: 700;
-    
   }
 
   #home a {
@@ -199,7 +198,7 @@
       position: absolute;
       width: 100%;
       height: 100%;
-      background: linear-gradient(to right, #5d5049, #00000000 65%);
+      background: linear-gradient(to right, #82736b, #00000000 65%);
       z-index: 1;
     }
   
@@ -255,7 +254,7 @@
 
     header#home .content img.logo {
       display: inherit;
-      width: 40rem;
+      width: 30rem;
       position: absolute;
       bottom: 96%;
       left: -3%;
