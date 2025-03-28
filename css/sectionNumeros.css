@@ -1,0 +1,103 @@
+#numeros {
+    overflow: hidden;
+    position: relative;
+
+    padding-block: 2rem;
+}
+
+#numeros .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#numeros header h2 {
+    color: #321d18;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+#numeros header h2 span {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+#numeros .cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+#numeros .borderCard {
+    width: 100%;
+    background: linear-gradient(130deg, #D3BEB9, #F2ECEA 30%);
+    padding: .2rem;
+    border-radius: 1.2rem;
+}
+
+#numeros .card {
+    position: relative;
+    width: 100%;
+    padding: 2rem;
+    padding-top: 4rem;
+    border-radius: 1rem;
+
+    background: #f4f2ee;
+    box-shadow: inset 16px 16px 32px #edebe7,
+            inset -16px -16px 32px #fbf9f5;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#numeros .card h3 {
+    background: var(--gradient);
+    color: #321d18;
+    font-size: 2rem;
+    font-weight: 500;
+    padding: 1rem 2rem;
+    border-radius: 0 0 1rem 1rem;
+
+    position: absolute;
+    top: -11%;
+}
+
+#numeros .card p {
+    font-size: 1.4rem;
+    color: #321d18;
+    text-align: left;
+}
+
+#numeros .card p span {
+    color: #321d18;
+    font-weight: 800;
+}
+
+#numeros a {
+    width: 100%;
+}
+
+#numeros a button {
+    margin-top: 3rem;
+}
+
+@media (min-width: 1080px)  {
+    section#numeros header h2 {
+        font-size: 4rem;
+    }
+
+    section#numeros .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+    section#numeros a {
+        width: initial;
+    }
+}

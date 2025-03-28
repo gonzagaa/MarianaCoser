@@ -6,6 +6,10 @@
     <title>Mariana Coser - Arquitetura</title>
     <link rel="shortcut icon" href="./assets/icon jairo evento.png" type="image/x-icon">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
     <link href="https://fonts.cdnfonts.com/css/paralucent-heavy?styles=168363,168366,168368,168370,168372,168374" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/apple-garamond" rel="stylesheet">
 
@@ -26,11 +30,11 @@
         <div class="content">
             <div class="text">
                   <img class="logo" src="./assets/logo esticada.png" alt="">
-                  <h1>Projetos que unem  <span>Funcionalidade e Estilo</span></h1>
+                  <h1 data-aos="fade-up">Projetos que unem  <span>Funcionalidade e Estilo</span></h1>
 
                   <p>Cada detalhe pensados para <span>elevar sua experiência</span></p>
 
-                  <a><button id="openModal" class="button openModal">INSCREVA-SE AQUI</button></a>
+                  <a><button id="openModal" class="button openModal">SAIBA MAIS</button></a>
             </div>
           </div>
       </div>      
@@ -45,6 +49,111 @@
         </svg>
       </div>
     </header>
+
+    <section id="divisa">
+      <div class="wrapper">
+        <div class="content">
+          <div class="cards">
+            <div class="card">
+              <ion-icon name="checkmark-done-outline"></ion-icon>
+              <h3>Arquitetura Residencial</h3>
+              <p>Projetos personalizados para residências de alto padrão, valorizando conforto e exclusividade.</p>
+            </div>
+
+            <div class="card">
+              <ion-icon name="checkmark-done-outline"></ion-icon>
+              <h3>Arquitetura Comercial</h3>
+              <p>Espaços funcionais que encantam, refletindo a identidade de marcas únicas.</p>
+            </div>
+
+            <div class="card">
+              <ion-icon name="checkmark-done-outline"></ion-icon>
+              <h3>Design de Interiores</h3>
+              <p>Curadoria de mobiliário e decoração que traduzem personalidade com sofisticação.</p>
+            </div>
+
+            <div class="card">
+              <ion-icon name="checkmark-done-outline"></ion-icon>
+              <h3>Gerenciamento de Obras</h3>
+              <p>Gestão minuciosa para garantir a excelência em cada etapa do projeto até a finalização</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="video">
+      <div data-aos="zoom-out" data-aos-duration="3000" class="before"></div>
+      <div class="custom-shape-divider-top-1742927720">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M600,112.77C268.63,112.77,0,65.52,0,7.23V120H1200V7.23C1200,65.52,931.37,112.77,600,112.77Z" class="shape-fill"></path>
+        </svg>
+      </div>
+      <div class="custom-shape-divider-bottom-1743079326">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,0V7.23C0,65.52,268.63,112.77,600,112.77S1200,65.52,1200,7.23V0Z" class="shape-fill"></path>
+        </svg>
+      </div>
+
+      <video class="video desktop" controls autoplay muted loop>
+        <source src="./assets/video desktop.mp4" type="video/mp4">
+        Seu navegador não suporta vídeo HTML5.
+      </video>     
+      
+      <video class="video mobile" autoplay muted loop playsinline>
+        <source src="./assets/video mobile.mp4" type="video/mp4">
+        Seu navegador não suporta vídeo HTML5.
+      </video>   
+
+      <div class="wrapper">
+        <header data-aos="fade-up" data-aos-duration="5000">
+          <h2>Acreditamos que a arquitetura vai além, ela é capaz de contar <span>histórias</span>, traduzir <span>emoções</span> e proporcionar <span>experiências</span>.</h2>
+          <a href="#"><button class="button">Fale conosco</button></a>
+        </header>
+      </div>
+    </section>
+
+    <section id="numeros">
+      <div class="wrapper">
+        <div class="content">
+          <header>
+            <h2>Etapas</h2>
+          </header>
+
+          <div class="cards">
+            <div class="borderCard">
+              <div class="card">
+                <h3>1</h3>
+                <p><span>Reunião Inicial:</span> Iniciamos com uma conversa aprofundada para compreender suas necessidades, desejos e expectativas. </p>
+              </div>
+            </div>
+
+            <div class="borderCard">
+              <div class="card">
+                <h3>2</h3>
+                <p><span>Briefing Detalhado:</span> Coletamos informações específicas sobre o uso do espaço, preferências estéticas e funcionalidade desejada.</p>
+              </div>
+            </div>
+
+            <div class="borderCard">
+              <div class="card">
+                <h3>3</h3>
+                <p><span>Proposta de orçamento:</span> Elaboramos uma proposta personalizada, refletindo suas expectativas.</p>
+              </div>
+            </div>
+
+            <div class="borderCard">
+              <div class="card">
+                <h3>4</h3>
+                <p><span>Fechamento e Início do Projeto:</span> Formalizando com o contrato assinado, iniciamos o desenvolvimento do projeto detalhado.</p>
+              </div>
+            </div>
+          </div>
+
+          <a><button id="openModalForm" class="button openModalForm">Quero participar</button></a>
+        </div>
+      </div>
+    </section>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

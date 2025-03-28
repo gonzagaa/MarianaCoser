@@ -1,0 +1,69 @@
+#divisa {
+    position: relative;
+    height: 90vh;
+
+    margin-bottom: 60%;
+}
+
+#divisa .cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+    position: absolute;
+    top: -5%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 90%;
+    z-index: 90;
+}
+
+#divisa .cards .card {
+    background: var(--bg-white);
+    text-align: left;
+    width: 100%;
+    padding: 4rem;
+    border-radius: 1.5rem;
+    box-shadow:  12px 12px 24px #d5d5d54d,
+             -12px -12px 24px #ffffff0d;
+}
+
+#divisa .cards .card ion-icon {
+    color: #fff;
+    background: var(--gradient);
+    border-radius: 1rem;
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+#divisa .cards .card h3 {
+    font-size: 1.8rem;
+    margin-top: 1rem;
+    font-weight: 700;
+}
+
+#divisa .cards .card p {
+    font-size: 1.4rem;
+    margin-top: .5rem;
+    font-weight: 300;
+}
+
+@media (min-width: 1080px) {
+    section#divisa {
+        height: 20vh;
+        margin-bottom: 0;
+    }
+
+    section#divisa .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        width: 80%;
+        top: -45%;
+    }
+
+    section#divisa .cards .card {
+        padding: 4rem;
+    }
+}
