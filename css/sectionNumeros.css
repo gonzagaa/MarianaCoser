@@ -2,7 +2,7 @@
     overflow: hidden;
     position: relative;
 
-    padding-block: 2rem;
+    padding-block: 6rem;
 }
 
 #numeros .content {
@@ -35,7 +35,7 @@
 
 #numeros .borderCard {
     width: 100%;
-    background: linear-gradient(130deg, #D3BEB9, #F2ECEA 30%);
+    background: linear-gradient(130deg, #D3BEB9, #e7dad5 30%);
     padding: .2rem;
     border-radius: 1.2rem;
 }
@@ -83,21 +83,58 @@
 }
 
 #numeros a button {
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
-@media (min-width: 1080px)  {
+#numeros .video {
+    margin-top: 2rem;
+}
+
+#numeros video {
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+}
+
+@media (min-width: 1080px) {
+    section#numeros {
+        padding-inline: 10%;
+    }
+
     section#numeros header h2 {
         font-size: 4rem;
     }
 
-    section#numeros .cards {
+    section#numeros .box {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 2rem;
+        grid-template-columns: 1.5fr 1fr;
+        gap: 10rem;
+    }
+
+    section#numeros .cards {
+        align-items: start;
+    }
+
+    section#numeros .cards .card {
+        padding: 4rem;
+        padding-top: 5rem;
+    }
+
+    section#numeros .cards .card h3 {
+        font-size: 2.5rem;
+    }
+
+    section#numeros .cards .card p {
+        font-size: 1.6rem;
+    }
+    
+    section#numeros video {
+        width: 75%;
     }
 
     section#numeros a {
         width: initial;
+
+        display: none;
     }
 }

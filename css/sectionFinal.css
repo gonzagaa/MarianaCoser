@@ -1,0 +1,143 @@
+#final {
+    overflow: hidden;
+    position: relative;
+}
+
+#final img.bg {
+    position: absolute;
+    width: 100%;
+    height: 100%; 
+    z-index: 0;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    filter: brightness(.8);
+    z-index: 0;
+
+    animation: img3 infinite linear 90s;
+
+}
+
+#final::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: linear-gradient(to right, #00000093 100%, transparent);
+    top: 0;
+    left: 0;
+}
+
+#final header {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+#final header h2 {
+    color: #fff;
+}
+
+#final header span.span {
+    background: initial;
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: initial;
+    color: #959595;
+}
+
+#final .topics {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: start;
+}
+
+#final .topics .topic {
+    position: relative;
+}
+
+#final .topics h3 {
+    font-size: 3rem;
+    color: #fff;
+}
+
+#final .topics h3 span {
+    font-size: 3rem;
+    color: #fff;
+}
+
+#final .topics p {
+    font-size: 1.4rem;
+    color: #c6c6c6;
+    margin-bottom: 0;
+}
+
+
+@keyframes img3 {
+    0% {
+        transform: translateX(0) scale(1);
+    }
+
+    100% {
+        transform: translateX(0) scale(2);
+    }
+}
+
+@media (min-width: 1080px) {
+    section#final .content {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        justify-content: end;
+    }
+
+    section#final header {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        text-align: right;
+        width: 60%;
+    }
+
+    section#final header h2 {
+        font-size: 3rem;
+    }
+
+    section#final::before {
+        background: linear-gradient(to left, #000000d9 15%, transparent);
+    }
+
+    section#final .topics {
+        margin-bottom: 5rem;
+        margin-top: 5rem;
+        gap: 2rem;
+    }
+
+    section#final .topics .topic {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        justify-content: center;
+    }
+
+    section#final .topics h3 {
+        font-size: 5rem;
+        font-weight: 600;
+        line-height: .9;
+        margin-bottom: 1rem;
+    }
+
+    section#final .topics h3 span {
+        font-size: 4rem;
+    }
+
+    section#final .topics p {
+        font-size: 1.7rem;
+        margin-bottom: 0;
+        color: #b6b6b6;
+    }
+}

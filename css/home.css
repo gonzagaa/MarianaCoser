@@ -1,7 +1,7 @@
 #home {
     background: var(--bg-black);
-    height: 95vh;
-    max-height: 95vh;
+    height: 94vh;
+    max-height: 94vh;
     overflow: hidden;
   
     position: relative;
@@ -58,13 +58,13 @@
     font-family: 'Apple Garamond Light', sans-serif;
     font-style: italic;
     font-weight: 200;
-    color: var(--primary-color);
+    color: #443833;
   }
   
   #home p {
     font-size: 1.6rem;
-    font-weight: 300;
-    color: #f1f1f1;
+    font-weight: 400;
+    color: #443833;
     line-height: 1.4;
   }
 
@@ -84,16 +84,18 @@
   }
   
   #home p span {
-    font-weight: 700;
+    font-weight: 500;
   }
 
   #home a {
     width: 100%;
   }
   
-  #home a button {
+  #home a button.button {
     margin-top: 1rem;
     width: 100%;
+    background: #f6eeea;
+
   }
   
   #home .image img {

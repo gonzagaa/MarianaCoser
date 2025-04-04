@@ -1,69 +1,136 @@
 #divisa {
     position: relative;
-    height: 90vh;
-
-    margin-bottom: 60%;
+    overflow: hidden;
 }
 
 #divisa .cards {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-
-    position: absolute;
-    top: -5%;
-    left: 50%;
-    transform: translate(-50%, 0);
-    width: 90%;
-    z-index: 90;
+    padding-bottom: 4rem;
 }
 
 #divisa .cards .card {
     background: var(--bg-white);
+    border: 2px solid var(--primary-color);
     text-align: left;
     width: 100%;
-    padding: 4rem;
+
+    padding: 3rem;
+    padding-block: 4rem;
+
     border-radius: 1.5rem;
     box-shadow:  12px 12px 24px #d5d5d54d,
              -12px -12px 24px #ffffff0d;
+
+    position: relative;
+}
+
+body section#divisa .swiper.mySwiper3 {
+    overflow: inherit;
 }
 
 #divisa .cards .card ion-icon {
-    color: #fff;
-    background: var(--gradient);
-    border-radius: 1rem;
-    font-size: 2rem;
-    padding: 1rem;
+    display: none;
 }
 
 #divisa .cards .card h3 {
     font-size: 1.8rem;
     margin-top: 1rem;
     font-weight: 700;
+
+    color: #342d2a;
 }
 
 #divisa .cards .card p {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     margin-top: .5rem;
-    font-weight: 300;
+    font-weight: 400;
 }
+
+#divisa .cards .card img {
+    display: inherit;
+    background: var(--gradient);
+    border-radius: 1rem;
+    width: 4rem;
+    padding: 1rem;
+}
+
+#divisa .swiper-pagination-bullet {
+    background-color: #5151513e; 
+    opacity: 1; 
+    width: 13px;
+    height: 13px;
+}
+  
+#divisa .swiper-pagination-bullet-active {
+    background-color: #D3BEB9; 
+}
+
 
 @media (min-width: 1080px) {
     section#divisa {
         height: 20vh;
         margin-bottom: 0;
+        overflow: visible;
     }
 
     section#divisa .cards {
+        position: absolute;
+        gap: 2rem;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        width: 80%;
+        width: 85%;
         top: -45%;
+        z-index: 90;
+        left: 50%;
+        transform: translate(-50%, 0);
     }
 
     section#divisa .cards .card {
         padding: 4rem;
+        background: #e6e2dc;
+        text-align: left;
+        width: 100%;
+        padding: 4rem;
+        border-radius: 1.5rem;
+        box-shadow:  12px 12px 24px #d5d5d54d,
+                -12px -12px 24px #ffffff0d;
+    }
+
+    section#divisa .cards .card ion-icon {
+        display: inherit;
+        color: #fff;
+        background: var(--gradient);
+        border-radius: 1rem;
+        font-size: 2rem;
+        padding: 1rem;
+    }
+
+    section#divisa .cards .card img {
+        display: inherit;
+        background: var(--gradient);
+        border-radius: 1rem;
+        width: 4rem;
+        padding: 1rem;
+    }
+
+    section#divisa .cards .card p {
+        text-align: left;
+    }
+
+    section#divisa .cards .card h3 {
+        position: initial;
+        background: initial;
+        padding: initial;
+        border-radius: initial;
+        color: #342d2a;
+        left: initial;
+        transform: initial;
+        top: initial;
+
+        width: initial;
+        text-align: initial;
+    }
+
+    #divisa .cards .card span {
+        display: none;
     }
 }

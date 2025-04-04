@@ -1,0 +1,59 @@
+#sobre {
+    overflow: hidden;
+    position: relative;
+    padding-top: 4rem;
+    padding-bottom: 8rem;
+}
+
+#sobre img {
+    width: 100%;
+}
+
+#sobre h2 {
+    font-size: 2.5rem;
+    color: #453933;
+
+    margin-top: 1rem;
+}
+
+#sobre p {
+    line-height: 1.6;
+    font-size: 1.3rem;
+    color: #453933;
+    font-weight: 500;
+
+    margin-top: .5rem;
+}
+
+@media (min-width: 1080px) {
+    section#sobre .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8rem;
+        align-items: center;
+    }
+
+    section#sobre h2 {
+        margin-top: 0;
+        text-align: left;
+        font-size: 3rem;
+    }
+
+    section#sobre p {
+        text-align: left;
+        font-size: 1.6rem;
+    }
+
+    section#sobre .text {
+        position: relative;
+    }
+
+    section#sobre .text::before {
+        content: '';
+        position: absolute;
+        width: 4px;
+        height: 100%;
+        background: var(--primary-color);
+        left: -2rem;
+    }
+}

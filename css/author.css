@@ -1,0 +1,21 @@
+#author {
+    overflow: hidden;
+    position: relative;
+    background: #0e0e0e;
+    padding-top: 0;
+    padding-bottom: 2rem;
+}
+
+#author a {
+    text-decoration: none;
+}
+
+#author a img {
+    width: 10rem;
+}
+
+#author p {
+    color: #a4a4a4;
+    font-size: 1.4rem;
+    
+}

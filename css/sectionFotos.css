@@ -1,0 +1,79 @@
+#fotos {
+    position: relative;
+    overflow: hidden;
+
+    height: 65vh;
+}
+
+#fotos img.bg {
+    position: absolute;
+    width: 400%;
+    height: auto;
+    top: 60%;
+    transform: translate(0, -50%);
+    z-index: 0;
+    left: 0;
+
+    animation: bgDesktop infinite linear 50s;
+
+    filter: blur(3px) brightness(.7);
+}
+
+#fotos .content {
+    position: relative;
+    z-index: 2;
+}
+
+#fotos .content img {
+    width: 100%;
+    border-radius: 1rem;
+}
+
+#fotos .cards {
+    padding-bottom: 4rem;
+    margin-top: 10%;
+}
+
+#fotos .swiper-pagination-bullet {
+    background-color: #5151513e; 
+    opacity: 1; 
+    width: 13px;
+    height: 13px;
+}
+  
+#fotos .swiper-pagination-bullet-active {
+    background-color: #D3BEB9; 
+}
+
+#fotos .wrapper {
+    height: 100%;
+}
+
+#fotos .content {
+    height: 100%;
+}
+
+@keyframes bgDesktop {
+    0% {
+        transform: translate(0, -50%);
+    }
+
+    50% {
+        transform: translate(-30%, -50%);
+    }
+
+    100% {
+        transform: translate(0, -50%);
+    }
+}
+
+@media (min-width: 1080px) {
+    section#fotos img.bg {
+        width: 300%;
+    }
+
+    section#fotos .cards {
+        margin-top: 4%;
+    }
+    
+}
