@@ -96,6 +96,12 @@
     border-radius: 2rem;
 }
 
+#numeros .video iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+}
+
 @media (min-width: 1080px) {
     section#numeros {
         padding-inline: 10%;
@@ -107,8 +113,8 @@
 
     section#numeros .box {
         display: grid;
-        grid-template-columns: 1.5fr 1fr;
-        gap: 10rem;
+        grid-template-columns: 2fr 1fr;
+        gap: 6rem;
     }
 
     section#numeros .cards {
@@ -126,6 +132,10 @@
 
     section#numeros .cards .card p {
         font-size: 1.6rem;
+    }
+
+    section#numeros .video {
+        margin-top: 0;
     }
     
     section#numeros video {

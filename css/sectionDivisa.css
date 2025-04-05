@@ -85,14 +85,22 @@ body section#divisa .swiper.mySwiper3 {
     }
 
     section#divisa .cards .card {
+        cursor: pointer;
         padding: 4rem;
-        background: #e6e2dc;
+        background: #e5e1da;
         text-align: left;
         width: 100%;
         padding: 4rem;
         border-radius: 1.5rem;
+        border: none;
+        transition: all 300ms ease-in-out;
         box-shadow:  12px 12px 24px #d5d5d54d,
                 -12px -12px 24px #ffffff0d;
+    }
+
+    section#divisa .cards .card:hover {
+        transform: scale(1.03);
+        background: #dbd5cb;
     }
 
     section#divisa .cards .card ion-icon {

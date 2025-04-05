@@ -38,6 +38,7 @@
 
 #final header h2 {
     color: #fff;
+    font-size: 2.2rem;
 }
 
 #final header span.span {
@@ -71,11 +72,13 @@
 }
 
 #final .topics p {
-    font-size: 1.4rem;
     color: #c6c6c6;
     margin-bottom: 0;
 }
 
+#final a button {
+    margin-top: 2rem;
+}
 
 @keyframes img3 {
     0% {
@@ -88,6 +91,9 @@
 }
 
 @media (min-width: 1080px) {
+    section#final {
+        padding-block: 20rem;
+    }
     section#final .content {
         display: flex;
         flex-direction: column;
@@ -104,7 +110,7 @@
     }
 
     section#final header h2 {
-        font-size: 3rem;
+        font-size: 3.6rem;
     }
 
     section#final::before {
