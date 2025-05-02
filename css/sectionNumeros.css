@@ -111,16 +111,21 @@
 
     section#numeros header h2 {
         font-size: 4rem;
+
+        margin-bottom: 7rem;
     }
 
     section#numeros .box {
         display: grid;
-        grid-template-columns: 2.9fr 1fr;
+        grid-template-columns: 3.2fr 1fr;
         gap: 6rem;
     }
 
     section#numeros .cards {
         align-items: start;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
 
     section#numeros .cards .card {
@@ -133,7 +138,7 @@
     }
 
     section#numeros .cards .card p {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
     }
 
     section#numeros .video {
