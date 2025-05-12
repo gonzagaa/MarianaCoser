@@ -348,6 +348,41 @@
       </div>
     </section>
 
+    <script>
+  function getCookie(name) {
+    const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+    return match ? match[2] : null;
+  }
+
+  async function sendFacebookEvent(eventName, email = '', phone = '', value = 0) {
+    const fbp = getCookie('_fbp') || null;
+    const fbc = getCookie('_fbc') || 'fb.1.' + Date.now() + '.' + Math.random().toString().slice(2, 12);
+
+    await fetch('https://maricoser-backend.vercel.app/send-event', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        event_name: eventName,
+        fbp,
+        fbc,
+        email,
+        phone,
+        value,
+        currency: 'BRL',
+        ip: '', // será preenchido automaticamente pela Meta
+        user_agent: navigator.userAgent,
+        source_url: window.location.href
+      }),
+    });
+  }
+
+  // Dispara o PageView assim que o usuário carregar a página
+  window.addEventListener('DOMContentLoaded', () => {
+    sendFacebookEvent("PageView", "email@exemplo.com", "11999999999", 0);
+  });
+</script>
+
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
