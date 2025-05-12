@@ -6,6 +6,16 @@ function hashData(data) {
 }
 
 module.exports = async (req, res) => {
+  // ✅ Cabeçalhos CORS
+  res.setHeader('Access-Control-Allow-Origin', 'https://marianacoser.com.br');
+  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+
+  // ✅ Preflight request
+  if (req.method === 'OPTIONS') {
+    return res.status(200).end();
+  }
+
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Método não permitido' });
   }
@@ -56,7 +66,11 @@ module.exports = async (req, res) => {
       `https://graph.facebook.com/v18.0/${process.env.FACEBOOK_PIXEL_ID}/events`,
       payload
     );
-    res.status(200).json({ status: 'Evento enviado com sucesso', response: response.data });
+
+    res.status(200).json({
+      status: 'Evento enviado com sucesso',
+      response: response.data,
+    });
   } catch (error) {
     console.error('Erro ao enviar evento:', error.response?.data || error.message);
     res.status(500).json({ error: 'Erro ao enviar evento' });
