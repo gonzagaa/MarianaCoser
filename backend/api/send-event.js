@@ -1,20 +1,15 @@
-const express = require('express');
 const axios = require('axios');
-const cors = require('cors');
-const dotenv = require('dotenv');
 const crypto = require('crypto');
-
-dotenv.config();
-
-const app = express();
-app.use(cors());
-app.use(express.json());
 
 function hashData(data) {
   return crypto.createHash('sha256').update(data).digest('hex');
 }
 
-app.post('/send-event', async (req, res) => {
+module.exports = async (req, res) => {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Método não permitido' });
+  }
+
   const {
     event_name,
     event_time,
@@ -47,7 +42,7 @@ app.post('/send-event', async (req, res) => {
           ph: hashedPhone ? [hashedPhone] : undefined,
         },
         custom_data: {
-          value: value || 0.00,
+          value: value || 0,
           currency: currency || 'BRL',
         },
         action_source: 'website',
@@ -61,13 +56,9 @@ app.post('/send-event', async (req, res) => {
       `https://graph.facebook.com/v18.0/${process.env.FACEBOOK_PIXEL_ID}/events`,
       payload
     );
-    res.status(200).json(response.data);
+    res.status(200).json({ status: 'Evento enviado com sucesso', response: response.data });
   } catch (error) {
     console.error('Erro ao enviar evento:', error.response?.data || error.message);
     res.status(500).json({ error: 'Erro ao enviar evento' });
   }
-});
-
-app.listen(3000, () => {
-  console.log('Servidor rodando na porta 3000');
-});
+};
