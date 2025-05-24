@@ -419,10 +419,15 @@ src="https://www.facebook.com/tr?id=1220603623033408&ev=PageView&noscript=1"
 <!-- Script adicional para os botões -->
 <script>
   document.querySelectorAll('.button').forEach(botao => {
-    botao.addEventListener('click', () => {
-      sendFacebookEvent('Clicou no botao e foi pro whatsapp');
-    });
+  botao.addEventListener('click', () => {
+    // Evento personalizado
+    sendFacebookEvent('Clicou no botao e foi pro whatsapp');
+    
+    // Evento padrão do Facebook (InitiateCheckout)
+    sendFacebookEvent('InitiateCheckout');
   });
+});
+
 </script>
 
 
